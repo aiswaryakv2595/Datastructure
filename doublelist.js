@@ -1,3 +1,4 @@
+//Double linked list
 class Node{
     constructor(value){
         this.value = value

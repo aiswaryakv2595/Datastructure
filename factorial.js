@@ -4,4 +4,4 @@ function factorial(n){
     fact*=i
 return fact
 }
-console.log(factorial(0));
+console.log(factorial(5));

@@ -1,3 +1,4 @@
+// Linked list practice - 1
 class Node{
     constructor(value){
         this.value = value;
