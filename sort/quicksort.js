@@ -2,7 +2,7 @@
 function quicksort(arr) {
     if(arr.length<=1){
         return arr
-    }
+    }  // since this is a recursive function, we have to put base condition to stop infinite calling function
     let pivot = arr[arr.length-1]
     let left = []
     let right = []
