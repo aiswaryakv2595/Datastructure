@@ -18,6 +18,10 @@ class HashTable{
         let index = this.hash(key)
         return this.table[index]
     }
+    remove(key){
+        let index = this.hash(key)
+        this.table[index] = undefined
+    }
     display(){
         for(let i = 0;i<this.table.length;i++){
             if(this.table[i]){
@@ -31,4 +35,6 @@ table.set("name","xyz")
 table.set("age",10)
 table.set("mane","ffrff")
 console.log(table.get("name"));
+table.display()
+table.remove("age")
 table.display()
