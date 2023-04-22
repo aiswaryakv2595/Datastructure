@@ -49,7 +49,17 @@ class HashTable {
       }
       return undefined // key not found
     }
-    
+    remove(key) {
+      let index = this.hash(key);
+
+      while (this.table[index]) {
+          if (this.table[index][0] === key) {
+              this.table[index] = null;
+              return;
+          }
+          index = (index + 1) % this.size;
+      }
+  }
     display() {
       for (let i = 0; i < this.table.length; i++) {
         if (this.table[i]) {
@@ -63,4 +73,7 @@ class HashTable {
   table.set("place","adr")
   table.set("addr","nfkhgek")
   table.set("naem","vff")
+
   table.display()  
+  table.remove("name")
+  table.display() 
