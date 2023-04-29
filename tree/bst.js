@@ -50,12 +50,52 @@ class BinarySearchTree{
             return this.search(root.right,value)
         }
     }
+    delete(value) {
+        this.root = this.deleteNode(this.root, value);
+      }
+    deleteNode(root,value){
+        if(!root){
+          return root
+        }else{
+          if(value>root.value){
+            root.right = this.deleteNode(value,root.right)
+          }else if(value < root.value){
+            root.left = this.deleteNode(value,root.left)
+          }else{
+            if(!root.left && !root.right){
+              return null 
+            }
+            if(!root.left){
+              return root.right
+            }else if(!root.right){
+              return root.left
+            }
+            root.value = this.inorderSuccessor(root.right)
+            root.right = this.deleteNode(value,root.right)
+          }
+        }
+        return root
+      }
+      
+      inorderSuccessor(root) {
+        while (root.left != null) {
+          root = root.left;
+        }
+        return root;
+      }
+      
 }
 const bst = new BinarySearchTree()
 
 
-bst.insert(3)
-bst.insert(5)
 bst.insert(12)
+bst.insert(5)
+bst.insert(3)
+
+// console.log(bst);
+// console.log(bst.search(bst.root,1));
+// console.log(bst.root);
+bst.delete(12)
+
+console.log('-----------');
 console.log(bst);
-console.log(bst.search(bst.root,1));
