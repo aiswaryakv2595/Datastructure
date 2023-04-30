@@ -163,5 +163,5 @@ tree.inOrder(tree.root)
 console.log('postorder');
 tree.postOrder(tree.root)
 
-// console.log(tree.findClosestValue(6));
-console.log(tree.search(tree.root));
+console.log(tree.findClosestValue(6));
+// console.log(tree.search(tree.root));
