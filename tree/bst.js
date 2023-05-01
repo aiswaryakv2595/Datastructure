@@ -88,6 +88,7 @@ class BinarySearchTree{
 const bst = new BinarySearchTree()
 
 
+
 bst.insert(12)
 bst.insert(5)
 bst.insert(3)
@@ -98,4 +99,4 @@ bst.insert(3)
 bst.delete(12)
 
 console.log('-----------');
-console.log(bst);
+bst.prime(bst.root)

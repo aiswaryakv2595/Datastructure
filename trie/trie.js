@@ -55,9 +55,9 @@ class Trie{
 }
 const trie = new Trie()
 trie.insert("the")
-trie.insert("their")
+trie.insert("heir")
 
 console.log(trie.search("the"));
-console.log(trie.startWithprefix("t"));
+console.log(trie.startWithprefix("e"));
 console.log(trie.root);
 trie.displayTrie(trie.root);

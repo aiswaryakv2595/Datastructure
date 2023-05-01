@@ -36,13 +36,16 @@ class BinarySearchTree{
         }
     }
     preOrder(root){
-        if(root){
-            console.log(root.value)
-            this.preOrder(root.left)
-            this.preOrder(root.right)
-        }
+      if(root){
+        console.log(root.value)
+        this.preOrder(root.left)
+        this.preOrder(root.right)
+      }
+           
+        
        
     }
+  
     inOrder(root){
         if(root){
             this.inOrder(root.left)
@@ -126,29 +129,7 @@ class BinarySearchTree{
     return leftValid && rightValid;
     }
       
-  findClosestValue(target) {
-    let closestValue = this.root.value;
-
-    function traverse(root) {
-      if (!root) {
-        return;
-      }
-
-      if (Math.abs(root.value - target) < Math.abs(closestValue - target)) {
-        closestValue = root.value;
-      }
-
-      if (target < root.value) {
-        traverse(root.left);
-      } else {
-        traverse(root.right);
-      }
-    }
-
-    traverse(this.root);
-    return closestValue;
-  }
-
+ 
 }
 const tree = new BinarySearchTree()
 tree.insert(10)
@@ -163,5 +144,3 @@ tree.inOrder(tree.root)
 console.log('postorder');
 tree.postOrder(tree.root)
 
-console.log(tree.findClosestValue(6));
-// console.log(tree.search(tree.root));
