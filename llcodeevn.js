@@ -29,7 +29,7 @@ class LinkedList{
     }
     append(value){//add last
         const node = new Node(value)
-        if(this.isEmpty()){
+        if(this.head == null){
             this.head = node
         }
         else{
@@ -177,8 +177,20 @@ class LinkedList{
        }
        
     }
-
-    
+    reviewArrayRev(array, limit) {
+        if (!Array.isArray(array)) {
+          return new LinkedList();
+        }
+        const newList = new LinkedList();
+        for (let i = 0; i < limit && i < array.length; i++) {
+          newList.append(array[i]);
+        }
+        for(let j=array.length;j>limit;j--){
+            newList.append(array[j])
+        }
+        
+        return newList;
+      }
 }
  const list = new LinkedList()
  
@@ -186,10 +198,12 @@ class LinkedList{
  list.prepend(20);
  list.prepend(30)
  list.insertBefore(20,35)
- list.removeValue(300)
+//  list.removeValue(300)
 
 list.print()
-console.log('dup');
-list.removeDup()
-list.print()
- console.log(`position is ${list.search(20)}`);
+// console.log('dup');
+// list.removeDup()
+// list.print()
+//  console.log(`position is ${list.search(20)}`);
+console.log(list.reviewArrayRev([10,20,30,40],2))
+// list.print()

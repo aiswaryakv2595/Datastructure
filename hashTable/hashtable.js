@@ -29,12 +29,27 @@ class HashTable{
             }
         }
     }
+    longestWord(){
+        let word = ''
+        for(let i=0;i<this.table.length;i++){
+            if(this.table[i]){
+                if(this.table[i].length>word.length){
+                    word = this.table[i]
+                }
+            }
+        }
+        console.log('word---'+word)
+    }
 }
 const table = new HashTable(40)
 table.set("name","xyz")
+table.set("animal","elephant")
 table.set("age",10)
-table.set("mane","ffrff")
-console.log(table.get("name"));
+table.set("hgd","ffrff")
+table.set("hhhbvv","xyzabcertdsz")
+
+// console.log(table.get("name"));
 table.display()
-table.remove("age")
-table.display()
+// table.remove("age")
+// table.display()
+table.longestWord()

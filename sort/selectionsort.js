@@ -1,6 +1,7 @@
 function selectionsort(array){
 for (let i = 0; i < array.length; i++) {
     let min = i
+    
    for (let j = i+1; j < array.length; j++) {
     
     if (array[j] < array[min]) {
@@ -17,4 +18,4 @@ for (let i = 0; i < array.length; i++) {
 }
 return array
 }
-console.log(selectionsort([2,6,2,9,6,7]));
+console.log(selectionsort([0,2,34,22,10,19]));
