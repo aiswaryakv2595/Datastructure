@@ -22,12 +22,11 @@ display(){
 }
 dfs(startingNode,visited={}){
     visited[startingNode] = true
-    console.log(startingNode);
-    for(let neighbor in this.adjacencyList){
-        if(!visited[neighbor]){
-            visited[neighbor] = true
-            this.dfs(neighbor,visited)
-        }
+    console.log(startingNode)
+    for(let neighbor of this.adjacencyList[startingNode]){
+       if(!visited[neighbor]){
+       this.dfs(neighbor,visited)
+       }
     }
 }
 }

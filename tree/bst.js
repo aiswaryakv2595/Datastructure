@@ -93,10 +93,10 @@ bst.insert(12)
 bst.insert(5)
 bst.insert(3)
 
-// console.log(bst);
+console.log(bst);
 // console.log(bst.search(bst.root,1));
 // console.log(bst.root);
-bst.delete(12)
+bst.delete(5)
 
 console.log('-----------');
-bst.prime(bst.root)
+console.log(bst);

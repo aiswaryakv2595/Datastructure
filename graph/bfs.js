@@ -49,4 +49,4 @@ graph.addEdge(1,3)
 graph.addEdge(2,4)
 graph.addEdge(3,4)
 
-graph.bfs(0)
+graph.bfs(1)
